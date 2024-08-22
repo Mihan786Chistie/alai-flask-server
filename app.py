@@ -23,8 +23,7 @@ def generate_json():
         sentences = [str(sentence) for sentence in sentences]
 
         formatted_sentences = "\n".join(sentences)
-        print(formatted_sentences)
-
+        
         prompt = f"""
         Convert the following sentences into a JSON array, where each item is a dictionary with 'heading' and 'description' keys. The 'heading' should be a concise title based on the sentence, using it directly if it's already suitable. For the 'description,' provide a short, casual explanation if the sentence is informal; if the sentence is formal, create a slightly longer and more formal description that clearly explains the heading. Return only the JSON array with no extra text or formatting. The sentences are:
         {formatted_sentences}

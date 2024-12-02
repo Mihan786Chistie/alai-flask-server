@@ -16,7 +16,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Define endpoint to generate JSON from sentences
-@app.route("/generate", methods=["POST"])
+@app.route("/generate", methods=["PO"])
 def generate_json():
     try:
         # Get the list of sentences from the request
@@ -48,7 +48,7 @@ def generate_json():
         
         return jsonify(result)
 
-    except json.JSONDecodeError:
+    except json.JSONDecodeError
         return jsonify({"error": "Failed to parse JSON response from AI."}), 500
     except Exception as e:
         return jsonify({"error": f"An unexpected error occurred: {str(e)}"}), 500
